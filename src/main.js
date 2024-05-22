@@ -1,13 +1,13 @@
 const core = require("@actions/core");
-const {GitHub, context} = require("@actions/github");
+const github = require("@actions/github");
 
 async function run() {
     try {
         let githubToken = process.env.GITHUB_TOKEN;
-        const github = new GitHub(githubToken);
+        const octokit = github.getOctokit(githubToken)
 
-        const {owner, repo} = context.repo;
-        const releaseInfo = await github.repos.getLatestRelease({
+        const {owner, repo} = github.context.repo;
+        const releaseInfo = await octokit.repos.getLatestRelease({
             owner,
             repo
         });
