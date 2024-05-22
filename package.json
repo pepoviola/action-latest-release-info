@@ -1,6 +1,6 @@
 {
   "name": "action-latest-release-info",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Get the latest release upload url, tag, date",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jossef/action-latest-release-info"
+    "url": "git+https://github.com/pepoviola/action-latest-release-info"
   },
   "keywords": [
     "actions",
