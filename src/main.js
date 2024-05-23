@@ -7,7 +7,7 @@ async function run() {
         const octokit = github.getOctokit(githubToken)
 
         const {owner, repo} = github.context.repo;
-        const releaseInfo = await octokit.repos.getLatestRelease({
+        const releaseInfo = await octokit.rest.repos.getLatestRelease({
             owner,
             repo
         });
